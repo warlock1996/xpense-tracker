@@ -74,10 +74,10 @@
   box-shadow: 0px 1px 1px 1px darkgray;
   border-radius: 5px;
 }
-.transaction-name:focus, .transaction-amount:focus, .transaction-add:focus {
+.transaction-name:focus, .transaction-amount:focus, .add-income:focus, .add-expense:focus {
   outline: none;
 }
-.transaction-add {
+.add-income {
   width: 100%;
   margin: 8px auto;
   padding: 10px;
@@ -93,6 +93,50 @@
   cursor: pointer;
   transition: background-color .2s;
 }
-.transaction-add:active {
+.add-income:active {
   background-color: green;
+}
+.add-expense {
+  width: 100%;
+  margin: 8px auto;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  box-shadow: 0px 1px 1px 1px lightgray;
+  font-weight: 600;
+  background-color: darkred;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+.add-expense:active {
+  background-color: red;
+}
+.transactions-list {
+  padding: 0;
+  list-style-type: none;
+}
+.transaction-income, .transaction-expense {
+  cursor: pointer;
+  font-size: 14px;
+  background-color: white;
+  margin: 5px;
+  padding: 6px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 1px lightgray;
+}
+.transaction-income {
+  border-left: 4px solid green;
+}
+.transaction-expense {
+  border-left: 4px solid darkred;
+}
+.item-name {
+  text-align: left;
+}
+.item-amount {
+  text-align: right;
 }
