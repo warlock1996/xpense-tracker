@@ -59,6 +59,7 @@ class App extends React.Component {
           <Cashbox income= { this.state.income } expense = { this.state.expense }/>
           <History transactions = { this.state.transactions } clear = { () => this.clearT()  }/>
           <Transaction save = { this.saveTransaction } setName = { this.setName } setAmount = { this.setAmount } name = { this.state.tname } amount = { this.state.tamount} />
+          <h5 className="footer">made with <span>&#10084;</span> <a href="https://github.com/warlock1996" target="_blank"> by arslan ali </a> </h5>
       </div>
     ); 
   }
