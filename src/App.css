@@ -125,8 +125,9 @@
   background-color: white;
   margin: 5px;
   padding: 6px;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   box-shadow: 0px 1px 1px 1px lightgray;
+  transition: display 1s;
 }
 .transaction-income {
   border-left: 4px solid green;
@@ -134,9 +135,29 @@
 .transaction-expense {
   border-left: 4px solid darkred;
 }
+.transaction-income:hover {
+  color: green; 
+}
+.transaction-expense:hover {
+  color: darkred;
+}
+.transactions-list {
+  position: relative;
+}
+.item-clear {
+  position: absolute;
+  left: 100%;
+  top: 1;
+  color: gray;
+  text-transform: lowercase;
+  font-size: 18px;
+}
+.item-clear:hover {
+  color: darkred;
+}
 .item-name {
-  text-align: left;
+  text-align: left !important;
 }
 .item-amount {
-  text-align: right;
+  text-align: right !important;
 }

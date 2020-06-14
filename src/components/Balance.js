@@ -5,8 +5,8 @@ function Balance (props) {
         <div className="balance-container">
             <p className="balance-label">Your Balance</p>
             <p className="balance-value"> ${ props.balance }.00</p>
-        </div>
+        </div>  
     )
 }
 
-export default Balance;
+export default Balance; 
