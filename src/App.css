@@ -89,7 +89,7 @@
   border-bottom: 1px dashed lightgray;
 }
 .transaction-name, .transaction-amount {
-  padding: 12px 0px;
+  padding: 12px 6px;
   width: 100%;
   margin: 8px auto;
   border: none;
