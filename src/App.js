@@ -17,7 +17,7 @@ function App ()  {
             <History/>
             <Transaction/>
           </GlobalProvider>
-            <h5 className="footer">made with <span>&#10084;</span> <a href="https://github.com/warlock1996" target="_blank"> by arslan ali </a> </h5>
+            <h5 className="footer">made with <span>&#10084;</span> <a href="https://github.com/warlock1996" rel="noopener noreferrer"  target="_blank"> by arslan ali </a> </h5>
       </div>
     ); 
   }
