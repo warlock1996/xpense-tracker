@@ -34,7 +34,7 @@ jobs:
      
      # Building For Production
     - name: Building For Production
-      run: npm build 
+      run: npm run build 
           
     # Install Surge
     - name: Installing Surge
@@ -42,5 +42,5 @@ jobs:
     
     # Deploying
     - name: Deploying App to Surge
-      run: surge ./dist expense-tracker-arslanali.surge.sh ${{ secrets.SURGE_TOKEN }}  
+      run: surge ./build expense-tracker-arslanali.surge.sh ${{ secrets.SURGE_TOKEN }}  
 
