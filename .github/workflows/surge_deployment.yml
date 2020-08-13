@@ -24,7 +24,9 @@ jobs:
 
     # Install Node js
     - name: Setup Node Js
-      run: actions/setup-node@v2-beta
+      uses: actions/setup-node@v2-beta
+      with:
+         node-version: 12
     
      # Install Npm
     - name: Instaling Npm
