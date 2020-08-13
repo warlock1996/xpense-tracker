@@ -31,11 +31,13 @@ jobs:
      # Install Npm
     - name: Instaling Yarn
       uses: Borales/actions-yarn@v2.3.0
+      with:  
+        cmd: install
      
      # Building For Production
     - name: Building For Production With Yarn
-      with: 
-        cmd: install
+      run: yarn build 
+      
           
     # Install Surge
     - name: Installing Surge
