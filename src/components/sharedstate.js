@@ -3,10 +3,7 @@ import Reducer from "./reducer"
 
 // some inital state for the context
 const initalState = {
-    transactions: [
-        { id: 1, name: 'Income one', amount: 8000 },
-        { id: 2, name: 'Income two', amount: 5000 }
-    ]
+    transactions: []
 }
 
 // creating global context

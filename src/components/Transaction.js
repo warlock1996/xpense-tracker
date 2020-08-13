@@ -20,8 +20,8 @@ function Transaction (props) {
             <input 
                 className="transaction-name" 
                 onChange = {(e) => setTr({...state, name: e.target.value}) }
-                value = { state.name } 
-                type="text" 
+                value = { state.name }
+                type="text"
                 placeholder="Title"
             />
             <input 
