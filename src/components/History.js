@@ -15,8 +15,8 @@ function History () {
             <ul className="transactions-list">
                { transactions.length ? transactions.map((item, index) => (
                        <li key= { item.id } className={ Math.sign(item.amount) !== -1 ? 'transaction-income' : 'transaction-expense'}> 
-                            <span className="item-name" contentEditable="true" onInput= { (e) => updateName(e, item) }>{item.name} </span> 
-                            <span className="item-amount" contentEditable="true" onInput= { (e) => updateAmount(e, item) }>{item.amount} </span>
+                            <span className="item-name" onInput= { (e) => updateName(e, item) }>{item.name} </span> 
+                            <span className="item-amount" onInput= { (e) => updateAmount(e, item) }>{item.amount} </span>
                             <span className="item-clear" onClick = { () => dispatcher({type: 'remove-transaction', payload: item.id})  }> &times; </span>
                        </li>
                     ))
