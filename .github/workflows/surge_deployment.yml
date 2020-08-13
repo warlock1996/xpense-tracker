@@ -42,5 +42,5 @@ jobs:
     
     # Deploying
     - name: Deploying App to Surge
-      run: surge ./build expense-tracker-arslanali.surge.sh ${{ secrets.SURGE_TOKEN }}  
+      run: surge ./build expense-tracker-arslanali1996.surge.sh ${{ secrets.SURGE_TOKEN }}  
 
