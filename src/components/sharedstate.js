@@ -3,7 +3,8 @@ import Reducer from "./reducer"
 
 // some inital state for the context
 const initalState = {
-    transactions: []
+    transactions: [],
+    theme: 'light'
 }
 
 // creating global context
@@ -19,6 +20,7 @@ export const GlobalProvider = (props) => {
         <GlobalContext.Provider value = {
             {
                 transactions: state.transactions,
+                theme: state.theme,
                 dispatcher: dispatch
             }
          }>

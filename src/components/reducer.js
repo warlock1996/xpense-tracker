@@ -22,7 +22,12 @@ export default (state, action) => {
             return {
                 ...state, 
                 transactions: [...state.transactions.filter(i => i.id !== item.id),  {"id": item.id, "name": item.name, "amount": amount}]
-            }        
+            }    
+        case "switch-theme":
+            return {
+                ...state,
+                theme: action.payload
+            }
         default: 
             return state;
     }
