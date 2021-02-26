@@ -18,6 +18,7 @@ function Transaction (props) {
     return (
         <div className="transaction-container">
             <input 
+                title="Enter Transaction Name" 
                 className="transaction-name" 
                 onChange = {(e) => setTr({...state, name: e.target.value}) }
                 value = { state.name }
@@ -25,11 +26,11 @@ function Transaction (props) {
                 placeholder="Title"
             />
             <input 
+                title="Enter Transaction Amount" 
+                className="transaction-amount" 
                 onChange = {(e) => setTr({...state, amount: e.target.value}) }
                 value = {state.amount} 
-                title="Enter Transaction Name" 
                 disabled={ !state.name.length } 
-                className="transaction-amount" 
                 type="number" 
                 placeholder="Amount"
             />

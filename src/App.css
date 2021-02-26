@@ -1,16 +1,7 @@
-.app {
-  background-color: var(--body-clr);
-  height: 100vh;
-  transition: background-color 1s, color 1s;
-}
-.wrapper {
-  max-width: 480px;
-  width: 480px;
-  margin: auto;
-}
 :root {
   --body-clr: white;
-  --primary-clr: lightslategray;
+  --primary-bg-clr: whitesmoke;
+  --primary-txt-clr: black;
   --secondary-clr: slategray;
   --primary-clr-hvrd: darkslategray;
   --expense-clr: darkred;
@@ -22,7 +13,8 @@
 }
 .app.dark {
   --body-clr: #000000;
-  --primary-clr: #892cdc;
+  --primary-bg-clr: #892cdc;
+  --primary-txt-clr: #ffffff;
   --secondary-clr: #52057b;
   --primary-clr-hvrd: darkslategray;
   --expense-clr: darkred;
@@ -32,11 +24,21 @@
   --border-clr: lightgray;
   --shadow-clr: black;
 }
+.app {
+  background-color: var(--body-clr);
+  height: 100vh;
+  transition: background-color 1s, color 1s;
+}
+.wrapper {
+  max-width: 480px;
+  width: 480px;
+  margin: auto;
+}
 .header {
   margin-top: 0;
   padding-top: 50px;
   text-align: center;
-  color: var(--primary-clr);
+  color: var(--primary-txt-clr);
   font-family: "Montserrat";
 }
 .footer {
@@ -64,7 +66,7 @@
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background-color: var(--primary-c);
+  background-color: white;
   box-shadow: 0px 1px 3px 1px var(--shadow-clr);
   border-radius: 50px;
   cursor: pointer;
@@ -74,13 +76,13 @@
   display: inline-block;
   padding: 5px 20px;
 }
-.switch .light:hover {
-  color: var(--primary-c);
-  background-color: var(--income-clr);
-}
-.switch .dark:hover {
-  color: var(--primary-c);
+.switch .dark.active {
   background-color: black;
+  color: white;
+}
+.switch .light.active {
+  background-color: green;
+  color: white;
 }
 
 .balance-container {
@@ -121,7 +123,7 @@
   font-family: "Montserrat";
   font-weight: bolder;
   padding: 20px;
-  background-color: var(--primary-c);
+  background-color: var(--primary-bg-clr);
   box-shadow: 0px 1px 3px 1px var(--shadow-clr);
   border-radius: 50px;
 }
@@ -133,13 +135,13 @@
   text-transform: uppercase;
 }
 .income-label {
-  color: var(--primary-clr);
+  color: var(--primary-txt-clr);
 }
 .expense-label {
   color: var(--negative-clr);
 }
 .income-value {
-  color: var(--primary-clr);
+  color: var(--primary-txt-clr);
   font-size: 18px;
   font-weight: bolder;
 }
@@ -179,6 +181,9 @@
   border: none;
   font-family: "Montserrat";
   font-weight: 500;
+  background: var(--body-clr);
+  border: 1px solid var(--primary-bg-clr);
+  color: var(--primary-txt-clr);
   box-shadow: 0px 1px 1px 1px var(--shadow-clr);
   border-radius: 5px;
   transition: padding 0.2s, border-bottom 0.2s;
@@ -197,7 +202,7 @@
   width: 100%;
   margin: 8px auto;
   padding: 10px;
-  color: var(--primary-c);
+  color: var(--primary-txt-clr);
   font-size: 14px;
   text-transform: capitalize;
   border: none;
@@ -216,7 +221,7 @@
   width: 100%;
   margin: 8px auto;
   padding: 10px;
-  color: var(--primary-c);
+  color: var(--primary-txt-clr);
   font-size: 14px;
   text-transform: capitalize;
   border: none;
@@ -239,7 +244,7 @@
 .transaction-expense {
   cursor: pointer;
   font-size: 14px;
-  background-color: var(--primary-c);
+  background-color: var(--primary-bg-clr);
   margin: 5px;
   padding: 8px;
   border-radius: 5px 0px 0px 5px;

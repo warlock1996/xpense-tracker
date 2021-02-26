@@ -1,10 +1,11 @@
 import React, { useReducer } from "react";
+import { getTheme } from '../theme'
 import Reducer from "./reducer"
 
 // some inital state for the context
 const initalState = {
     transactions: [],
-    theme: 'light'
+    theme: getTheme()
 }
 
 // creating global context

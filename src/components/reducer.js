@@ -1,3 +1,4 @@
+import { setTheme } from "../theme"
 export default (state, action) => {
     switch (action.type) {
         case "remove-transaction":
@@ -24,6 +25,7 @@ export default (state, action) => {
                 transactions: [...state.transactions.filter(i => i.id !== item.id),  {"id": item.id, "name": item.name, "amount": amount}]
             }    
         case "switch-theme":
+            setTheme(action.payload)
             return {
                 ...state,
                 theme: action.payload
